@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="JanCejka_PosEvidence::management" sortOrder="100" title="Point Of Sale" module="JanCejka_PosEvidence"
+             parent="Magento_Backend::content" resource="JanCejka_PosEvidence::management" translate="title"
+             action="pos/pos/index"/>
+    </menu>
+</config>
