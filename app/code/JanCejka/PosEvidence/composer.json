@@ -1,0 +1,20 @@
+{
+  "name": "jan-cejka/pos-evidence",
+  "version": "1.0.0",
+  "description": "POS Evidence",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "JanCejka\\PosEvidence\\": ""
+    }
+  }
+}
