@@ -1,5 +1,25 @@
-<h2><?php echo 'Evidence List'; ?></h2>
-<h2><?php
-    /** @var \JanCejka\PosEvidence\Block\Collection $block */
-    echo $block->getCollection();
-    ?></h2>
+<?php /** @var Thecoachsmb\Mymodule\Block\Article $block */ ?>
+<?php $articleCollection = $block->getCollection(); ?>
+<?php if (count($articleCollection)) { ?>
+    <h2><?= $block->escapeHtml(__('Evidence List')) ?></h2>
+    <table>
+        <thead>
+            <tr>
+                <th>POS Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Is Available</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($block->getCollection() as $pos): ?>
+                <tr>
+                    <td><?php echo $pos->getId(); ?></td>
+                    <td><?php echo $pos->getName(); ?></td>
+                    <td><?php echo $pos->getAddress(); ?></td>
+                    <td><?php echo $pos->getIsAvailable(); ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+<?php } ?>
