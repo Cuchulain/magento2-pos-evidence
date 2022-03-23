@@ -2,4 +2,13 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="JanCejka\PosEvidence\Api\Data\PosInterface" type="JanCejka\PosEvidence\Model\Data\PosData"/>
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="jancejka_posevidence_pos" xsi:type="object">
+                    JanCejka\PosEvidence\Console\Command\CommandPosAdd
+                </item>
+            </argument>
+        </arguments>
+    </type>
 </config>
