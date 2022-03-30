@@ -1,6 +1,6 @@
-<?php /** @var Thecoachsmb\Mymodule\Block\Article $block */ ?>
-<?php $articleCollection = $block->getCollection(); ?>
-<?php if (count($articleCollection)) { ?>
+<?php /** @var JanCejka\PosEvidence\Block\Collection $block */ ?>
+<?php $posCollection = $block->getCollection(); ?>
+<?php if (count($posCollection)) { ?>
     <h2><?= $block->escapeHtml(__('Evidence List')) ?></h2>
     <table>
         <thead>
